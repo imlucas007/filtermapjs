@@ -53,3 +53,12 @@ console.table(finalO);
 const buscaText = 'pol';
 const produtosEncontrados = produtos.filter(produto => produto.nome.toLowerCase().includes(buscaText.toLowerCase()));
 console.table(produtosEncontrados);
+
+// criando uma função - dessa forma conseguimos buscar qualquer produto
+// função precisa ser chmada para funcionar
+function buscarProdutos(produtoBuscar) {
+    return produtos.filter(produto => produto.nome.toLowerCase().includes(produtoBuscar.toLowerCase()));
+}
+
+// chamando a função e dizendo o que ela tem que buscar
+console.table(buscarProdutos('sm'));
